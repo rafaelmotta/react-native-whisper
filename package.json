@@ -1,0 +1,34 @@
+{
+  "name": "react-native-whisper",
+  "version": "1.0.0",
+  "description": "📣 A React Native inspired on Whisper, a component that will make the task of display messages and in-app notifications simple. It has three different views inside http://hyper.no",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "lint": "eslint .",
+    "format": "yarn prettier --config .prettierrc --write \"src/*/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelmotta/react-native-whisper.git"
+  },
+  "author": "Rafael Michels Motta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelmotta/react-native-whisper/issues"
+  },
+  "homepage": "https://github.com/rafaelmotta/react-native-whisper#readme",
+  "dependencies": {
+    "prop-types": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "prettier": "^1.11.1"
+  }
+}
