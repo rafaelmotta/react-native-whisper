@@ -84,28 +84,28 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   successContainer: {
-    backgroundColor: theme.successBackgroundColor,
+    backgroundColor: theme.successBackgroundColor
   },
   successText: {
-    color: theme.successColor,
+    color: theme.successColor
   },
   infoText: {
-    color: theme.infoColor,
+    color: theme.infoColor
   },
   infoContainer: {
-    backgroundColor: theme.infoBackgroundColor,
+    backgroundColor: theme.infoBackgroundColor
   },
   dangerText: {
-    color: theme.dangerColor,
+    color: theme.dangerColor
   },
   dangerContainer: {
-    backgroundColor: theme.dangerBackgroundColor,
+    backgroundColor: theme.dangerBackgroundColor
   },
   warningText: {
-    color: theme.warningColor,
+    color: theme.warningColor
   },
   warningContainer: {
-    backgroundColor: theme.warningBackgroundColor,
+    backgroundColor: theme.warningBackgroundColor
   },
   text: {
     color: theme.defaultColor,

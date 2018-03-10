@@ -8,21 +8,53 @@ const theme = {
     return Platform.OS === 'ios' ? 20 : NativeModules.StatusBarManager.HEIGHT
   },
 
+  get shoutContentHeight () {
+    return scale(80)
+  },
+
+  get shoutTotalHeight () {
+    return this.statusBarHeight + this.shoutContentHeight
+  },
+
   get screenWidth () {
     return Dimensions.get('window').width
   },
 
+  get gutter () {
+    return scale(15)
+  },
+
   // Default colors
+  get baseBorderSize () {
+    return 1.5
+  },
+
+  get baseBorderColor () {
+    return '#E5E5E5'
+  },
+
   get defaulBackgroundColor () {
     return '#F9F9F9'
+  },
+
+  get inverseBackgroundColor () {
+    return '#000'
   },
 
   get defaultColor () {
     return '#333333'
   },
 
+  get inverseColor () {
+    return '#FFFFFF'
+  },
+
   get smallFontSize () {
-    return scale(11)
+    return scale(10)
+  },
+
+  get baseFontSize () {
+    return scale(12)
   },
 
   // Themes
@@ -56,7 +88,13 @@ const theme = {
 
   get warningColor () {
     return '#FFFFFF'
+  },
+
+  // Shout
+  get shoutImageSize () {
+    return scale(40)
   }
+
 }
 
 export default theme

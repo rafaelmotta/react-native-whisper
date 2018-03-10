@@ -155,16 +155,16 @@ class Whistle extends React.Component {
 
       Animated.timing(
         this.animationValue, options
-      ).start()
+      ).start(() => {
+        // Event triggers
+        if (this.state.visible && this.props.onShow) {
+          return this.props.onShow()
+        }
 
-      // Event triggers
-      if (this.state.visible && this.props.onShow) {
-        return this.props.onShow()
-      }
-
-      if (!this.state.visible && this.props.onHide) {
-        return this.props.onHide()
-      }
+        if (!this.state.visible && this.props.onHide) {
+          return this.props.onHide()
+        }
+      })
     })
   }
 
