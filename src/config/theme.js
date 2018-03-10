@@ -4,59 +4,59 @@ import { scale } from '../helpers/scalling'
 
 const theme = {
   // Utils
-  get statusBarHeight() {
+  get statusBarHeight () {
     return Platform.OS === 'ios' ? 20 : NativeModules.StatusBarManager.HEIGHT
   },
 
-  get screenWidth() {
+  get screenWidth () {
     return Dimensions.get('window').width
   },
 
   // Default colors
-  get defaulBackgroundColor() {
+  get defaulBackgroundColor () {
     return '#F9F9F9'
   },
 
-  get defaultColor() {
+  get defaultColor () {
     return '#333333'
   },
 
-  get smallFontSize() {
+  get smallFontSize () {
     return scale(11)
   },
 
   // Themes
-  get successBackgroundColor() {
+  get successBackgroundColor () {
     return '#4CCF78'
   },
 
-  get successColor() {
+  get successColor () {
     return '#FFFFFF'
   },
 
-  get infoBackgroundColor() {
+  get infoBackgroundColor () {
     return '#5397D7'
   },
 
-  get infoColor() {
+  get infoColor () {
     return '#FFFFFF'
   },
 
-  get dangerBackgroundColor() {
+  get dangerBackgroundColor () {
     return '#DC524A'
   },
 
-  get dangerColor() {
+  get dangerColor () {
     return '#FFFFFF'
   },
 
-  get warningBackgroundColor() {
-    return '#F6AB42'
+  get warningBackgroundColor () {
+    return '#CE5F14'
   },
 
-  get warningColor() {
+  get warningColor () {
     return '#FFFFFF'
-  },
+  }
 }
 
 export default theme

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import {
   View,
   Text,
-  ActivityIndicator,
   TouchableOpacity,
   StyleSheet
 } from 'react-native'
@@ -17,18 +16,15 @@ class Whisper extends React.Component {
       PropTypes.string,
       PropTypes.node
     ]).isRequired,
-    duration: PropTypes.number, // TODO
-    onComplete: PropTypes.func,// TODO
-    onClose: PropTypes.func,  // TODO
     onPress: PropTypes.func,
-    theme: PropTypes.oneOf([ // TODO
+    theme: PropTypes.oneOf([
       'success',
       'info',
       'danger',
       'warning'
     ]),
     containerStyle: PropTypes.shape({}),
-    textStyle: PropTypes.shape({}),
+    textStyle: PropTypes.shape({})
   }
 
   static defaultProps = {
@@ -43,6 +39,10 @@ class Whisper extends React.Component {
           <View
             style={[
               styles.container,
+              this.props.theme === 'success' && styles.successContainer,
+              this.props.theme === 'info' && styles.infoContainer,
+              this.props.theme === 'danger' && styles.dangerContainer,
+              this.props.theme === 'warning' && styles.warningContainer,
               this.props.containerStyle
             ]}
           >
@@ -51,6 +51,10 @@ class Whisper extends React.Component {
                 <Text
                   style={[
                     styles.text,
+                    this.props.theme === 'success' && styles.successText,
+                    this.props.theme === 'info' && styles.infoText,
+                    this.props.theme === 'danger' && styles.dangerText,
+                    this.props.theme === 'warning' && styles.warningText,
                     this.props.textStyle
                   ]}
                 >
@@ -78,6 +82,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row'
+  },
+  successContainer: {
+    backgroundColor: theme.successBackgroundColor,
+  },
+  successText: {
+    color: theme.successColor,
+  },
+  infoText: {
+    color: theme.infoColor,
+  },
+  infoContainer: {
+    backgroundColor: theme.infoBackgroundColor,
+  },
+  dangerText: {
+    color: theme.dangerColor,
+  },
+  dangerContainer: {
+    backgroundColor: theme.dangerBackgroundColor,
+  },
+  warningText: {
+    color: theme.warningColor,
+  },
+  warningContainer: {
+    backgroundColor: theme.warningBackgroundColor,
   },
   text: {
     color: theme.defaultColor,
